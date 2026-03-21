@@ -1,0 +1,42 @@
+/* src/styles/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Map CSS variables to keep Apple-style dark theme values consistent */
+    --theme-background: #000000;
+    --theme-card: #1C1C1E;
+    --theme-primary: #0A84FF;
+    --theme-text: #F5F5F7;
+  }
+
+  body {
+    /* Smooth font rendering for Apple-style typography */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+    
+    /* Using system fonts for native, minimal UI feel */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Custom utilitarian classes mapped to our theme variables for easy usage */
+@layer utilities {
+  .bg-theme-background {
+    background-color: var(--theme-background);
+  }
+  .bg-theme-card {
+    background-color: var(--theme-card);
+  }
+  .text-theme-primary {
+    color: var(--theme-primary);
+  }
+  .text-theme-text {
+    color: var(--theme-text);
+  }
+}
