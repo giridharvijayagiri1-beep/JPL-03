@@ -77,17 +77,17 @@ function App() {
     <div className="min-h-screen bg-theme-background text-theme-text font-sans flex flex-col relative w-full max-w-md mx-auto shadow-2xl overflow-hidden">
       
       {/* Universal Base Header */}
-      <header className="flex items-center justify-between p-5 border-b border-white/5 bg-theme-background/80 backdrop-blur-xl z-30 sticky top-0">
+      <header className="flex items-center justify-between p-4 border-b border-white/5 bg-theme-background/80 backdrop-blur-xl z-30 sticky top-0 h-16">
         <div 
-          className="flex items-center gap-3.5 ml-2 cursor-pointer active:opacity-70 transition-opacity select-none"
+          className="flex items-center gap-2.5 ml-1 cursor-pointer active:opacity-70 transition-opacity select-none min-w-0"
           onClick={handleHeaderClick}
         >
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-theme-primary animate-pulse shadow-[0_0_10px_rgba(10,132,255,0.4)]"></span>
-            <h1 className="text-[22px] font-black tracking-tighter text-white">JPL-03</h1>
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-theme-primary animate-pulse shadow-[0_0_10px_rgba(10,132,255,0.4)]"></span>
+            <h1 className="text-xl font-black tracking-tighter text-white whitespace-nowrap">JPL-03</h1>
           </div>
-          <div className="h-5 w-px bg-white/10 mx-1"></div>
-          <p className="text-lg text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
+          <div className="h-4 w-px bg-white/10 flex-shrink-0"></div>
+          <p className="text-[14px] text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
             Jammikunta Premier League
           </p>
         </div>
