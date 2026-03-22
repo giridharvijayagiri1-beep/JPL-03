@@ -55,12 +55,12 @@ npm run build
 
 ## 🌐 Deployment
 
-This project is configured for **Firebase Hosting** with **GitHub Actions** for automatic deployment whenever code is pushed to the `main` branch.
+This project is fully automated using **Firebase Hosting** and **GitHub Actions**.
 
-### Deployment Configuration
-- **Build Folder**: `dist`
+- **Auto-Deploy**: Every push to the `main` branch triggers an automatic build and deployment.
+- **Status**: ✅ CI/CD is configured and active.
 - **Build Command**: `npm run build`
-- **Configuration**: `firebase.json`
+- **Output Folder**: `dist`
 
 ---
 
