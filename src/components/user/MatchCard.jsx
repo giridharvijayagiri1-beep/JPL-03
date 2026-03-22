@@ -45,31 +45,31 @@ function MatchCard({ match, teamAMeta, teamBMeta }) {
                  </span>
                )}
              </div>
-             <span className={`text-sm font-semibold truncate flex-1 uppercase tracking-tight
-                ${isCompleted && match.winnerTeamId === match.teamAId ? 'text-theme-primary font-bold' : 'text-theme-text'}`}>
-               {tA.name}
-             </span>
-           </div>
-           {isCompleted && match.finalScore?.teamA && (
-             <span className="text-xl font-black tracking-tighter text-white pl-12 mt-1 -mb-1">
-               {match.finalScore.teamA.runs}<span className="text-sm font-medium text-theme-text/40 mx-0.5">/</span>{match.finalScore.teamA.wickets}
-               <span className="text-[10px] text-theme-text/40 ml-1.5 font-medium">{match.finalScore.teamA.overs}v</span>
-             </span>
-           )}
-        </div>
+              <span className={`text-[13px] font-bold truncate flex-1 uppercase tracking-tight whitespace-nowrap
+                 ${isCompleted && match.winnerTeamId === match.teamAId ? 'text-theme-primary' : 'text-theme-text'}`}>
+                {tA.name}
+              </span>
+            </div>
+            {isCompleted && match.finalScore?.teamA && (
+              <span className="text-xl font-black tracking-tighter text-white pl-12 mt-1 -mb-1">
+                {match.finalScore.teamA.runs}<span className="text-sm font-medium text-theme-text/40 mx-0.5">/</span>{match.finalScore.teamA.wickets}
+                <span className="text-[10px] text-theme-text/40 ml-1.5 font-medium">{match.finalScore.teamA.overs}v</span>
+              </span>
+            )}
+         </div>
 
-        {/* Separator */}
-        <div className="flex flex-col items-center justify-center px-3 mt-4 self-start">
-            <span className="text-[10px] text-theme-text/30 font-black uppercase tracking-widest">VS</span>
-        </div>
+         {/* Separator */}
+         <div className="flex flex-col items-center justify-center px-1.5 mt-4 self-start flex-shrink-0">
+             <span className="text-[9px] text-theme-text/20 font-black uppercase tracking-widest">VS</span>
+         </div>
 
-        {/* Team B side */}
-        <div className="flex flex-col items-end flex-1 w-full overflow-hidden">
-           <div className="flex items-center justify-end gap-3 mb-1.5 w-full">
-             <span className={`text-sm font-semibold truncate flex-1 text-right uppercase tracking-tight
-                ${isCompleted && match.winnerTeamId === match.teamBId ? 'text-theme-primary font-bold' : 'text-theme-text'}`}>
-               {tB.name}
-             </span>
+         {/* Team B side */}
+         <div className="flex flex-col items-end flex-1 w-full overflow-hidden">
+            <div className="flex items-center justify-end gap-2 mb-1.5 w-full">
+              <span className={`text-[13px] font-bold truncate flex-1 text-right uppercase tracking-tight whitespace-nowrap
+                 ${isCompleted && match.winnerTeamId === match.teamBId ? 'text-theme-primary' : 'text-theme-text'}`}>
+                {tB.name}
+              </span>
              <div className={`w-9 h-9 flex-shrink-0 rounded-full flex items-center justify-center overflow-hidden border transition-colors
                 ${isCompleted && match.winnerTeamId === match.teamBId ? 'border-theme-primary' : 'border-white/10'}
              `}>

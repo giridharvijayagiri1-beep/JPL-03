@@ -194,10 +194,10 @@ function AdminHome() {
               <span className="text-red-500 text-[9px] font-black uppercase tracking-[0.2em] flex items-center gap-1.5 drop-shadow-sm mb-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> LIVE
               </span>
-              <div className="flex items-center gap-2">
-                <span className="text-white font-bold text-xl flex items-center gap-1">{teams.teamA?.name?.toUpperCase() || 'LOCAL'}{liveData?.battingTeam === liveData?.teamAId && <span className="text-base">🏏</span>}</span>
-                <span className="text-theme-text/30 text-[11px] font-black italic">vs</span>
-                <span className="text-white font-bold text-xl flex items-center gap-1">{teams.teamB?.name?.toUpperCase() || 'AWAY'}{liveData?.battingTeam === liveData?.teamBId && <span className="text-base">🏏</span>}</span>
+              <div className="flex items-center gap-1.5 flex-nowrap overflow-hidden">
+                <span className="text-white font-black text-[13px] flex items-center gap-1 whitespace-nowrap shrink-0">{teams.teamA?.name?.toUpperCase() || 'LOCAL'}{liveData?.battingTeam === liveData?.teamAId && <span className="text-xs">🏏</span>}</span>
+                <span className="text-theme-text/20 text-[9px] font-black italic shrink-0">VS</span>
+                <span className="text-white font-black text-[13px] flex items-center gap-1 whitespace-nowrap shrink-0">{teams.teamB?.name?.toUpperCase() || 'AWAY'}{liveData?.battingTeam === liveData?.teamBId && <span className="text-xs">🏏</span>}</span>
               </div>
             </div>
             <div className="flex flex-col items-end">

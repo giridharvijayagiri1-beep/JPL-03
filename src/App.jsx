@@ -39,7 +39,7 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === 'JPL2026@admin123') {
+    if (password === 'jpl-03@admin-03') {
       setIsAdmin(true);
       setShowLoginModal(false);
       setPassword('');
@@ -77,29 +77,34 @@ function App() {
     <div className="min-h-screen bg-theme-background text-theme-text font-sans flex flex-col relative w-full max-w-md mx-auto shadow-2xl overflow-hidden">
       
       {/* Universal Base Header */}
-      <header className="flex items-center justify-between p-4 border-b border-white/5 bg-theme-background/80 backdrop-blur-xl z-30 sticky top-0 h-16">
+      <header className="flex items-center justify-between px-4 py-4 border-b border-white/10 bg-[#050505]/90 backdrop-blur-2xl z-30 sticky top-0 h-[72px]">
         <div 
-          className="flex items-center gap-2.5 ml-1 cursor-pointer active:opacity-70 transition-opacity select-none min-w-0"
+          className="flex items-center gap-2 cursor-pointer active:scale-95 transition-all select-none min-w-0"
           onClick={handleHeaderClick}
         >
-          <div className="flex items-center gap-1.5 flex-shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-theme-primary animate-pulse shadow-[0_0_10px_rgba(10,132,255,0.4)]"></span>
-            <h1 className="text-xl font-black tracking-tighter text-white whitespace-nowrap">JPL-03</h1>
+          {/* Main JPL Badge */}
+          <div className="flex items-center gap-2 bg-theme-primary/10 border border-theme-primary/20 px-3 py-1.5 rounded-xl shadow-[0_0_20px_rgba(10,132,255,0.15)] flex-shrink-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-theme-primary animate-pulse shadow-[0_0_8px_rgba(10,132,255,1)]"></span>
+            <h1 className="text-lg font-black tracking-tighter text-white whitespace-nowrap leading-none">JPL-03</h1>
           </div>
+          
           {!isAdmin && (
-            <>
-              <div className="h-4 w-px bg-white/10 flex-shrink-0"></div>
-              <p className="text-[14px] text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
-                Jammikunta Premier League
-              </p>
-            </>
+            <div className="flex items-center min-w-0">
+              <div className="h-4 w-px bg-white/10 mx-1 flex-shrink-0"></div>
+              {/* League Full Name Tag */}
+              <div className="bg-white/[0.03] border border-white/5 px-2.5 py-1.5 rounded-lg flex-shrink min-w-0 overflow-hidden">
+                <p className="text-[13px] text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis opacity-80 decoration-theme-primary/30">
+                  Jammikunta Premier League
+                </p>
+              </div>
+            </div>
           )}
         </div>
 
         {isAdmin && (
           <button 
             onClick={() => setIsAdmin(false)}
-            className="bg-theme-primary/10 text-theme-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border border-theme-primary/20 animate-fade-in"
+            className="bg-yellow-500/10 text-yellow-500 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest border border-yellow-500/20 shadow-[0_0_15px_rgba(255,215,0,0.1)] active:scale-90 transition-all"
           >
             User Mode
           </button>
