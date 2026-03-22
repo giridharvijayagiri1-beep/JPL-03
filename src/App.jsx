@@ -39,7 +39,7 @@ function App() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === 'JPL2024') {
+    if (password === 'JPL2026@admin123') {
       setIsAdmin(true);
       setShowLoginModal(false);
       setPassword('');
