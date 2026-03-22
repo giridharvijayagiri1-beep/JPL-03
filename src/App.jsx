@@ -86,10 +86,14 @@ function App() {
             <span className="w-1.5 h-1.5 rounded-full bg-theme-primary animate-pulse shadow-[0_0_10px_rgba(10,132,255,0.4)]"></span>
             <h1 className="text-xl font-black tracking-tighter text-white whitespace-nowrap">JPL-03</h1>
           </div>
-          <div className="h-4 w-px bg-white/10 flex-shrink-0"></div>
-          <p className="text-[14px] text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
-            Jammikunta Premier League
-          </p>
+          {!isAdmin && (
+            <>
+              <div className="h-4 w-px bg-white/10 flex-shrink-0"></div>
+              <p className="text-[14px] text-theme-text font-black uppercase tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis">
+                Jammikunta Premier League
+              </p>
+            </>
+          )}
         </div>
 
         {isAdmin && (
